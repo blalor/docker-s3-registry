@@ -1,16 +1,14 @@
 # Set env vars for AWS_* when launching - this config will refer to them.
-# To specify prod flavor, set the environment variable SETTINGS_FLAVOR=prod
 
 # example launching with this config, in a docker image:
 # docker run -p 5000:5000 \
-#     -e SETTINGS_FLAVOR=prod \
 #     -e AWS_KEY=X \
 #     -e AWS_SECRET=Y \
 #     -e WORKER_SECRET_KEY=Z \
 #     -e AWS_BUCKET=images \
 #      blalor/s3-registry
 
-prod:
+common:
     storage: s3
     storage_path: /images
     s3_encrypt: false
@@ -24,3 +22,7 @@ prod:
     boto_bucket: _env:AWS_BUCKET
     s3_bucket: _env:AWS_BUCKET
 
+    cache_lru:
+        host: 127.0.0.1
+        port: 6379
+        #password: _env:CACHE_LRU_REDIS_PASSWORD

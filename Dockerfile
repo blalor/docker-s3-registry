@@ -1,6 +1,5 @@
-FROM stackbrew/registry:0.6.1
+FROM blalor/centos-supervised:latest
 MAINTAINER Brian Lalor <blalor@bravo5.org>
 
-ENV SETTINGS_FLAVOR prod
-
-ADD config.yml /docker-registry/config.yml
+ADD src/ /tmp/src/
+RUN /tmp/src/config.sh
