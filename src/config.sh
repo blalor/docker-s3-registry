@@ -13,7 +13,7 @@ git clone https://github.com/dotcloud/docker-registry.git /srv/docker-registry
 mv registry-config.yml /srv/docker-registry/config/config.yml
 
 cd /srv/docker-registry
-git checkout 0.6.3
+git checkout 0.6.5
 
 pip install -r requirements.txt
 
