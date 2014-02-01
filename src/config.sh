@@ -17,6 +17,8 @@ git checkout 0.6.5
 
 pip install -r requirements.txt
 
+mkdir -p /var/lib/docker/registry
+
 ## cleanup
 cd /
 yum clean all

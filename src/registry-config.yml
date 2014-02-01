@@ -9,18 +9,10 @@
 #      blalor/s3-registry
 
 common:
-    storage: s3
-    storage_path: /images
-    s3_encrypt: false
-    s3_secure: true
+    storage: local
+    storage_path: /var/lib/docker/registry
 
     secret_key: _env:WORKER_SECRET_KEY
-
-    s3_access_key: _env:AWS_KEY
-    s3_secret_key: _env:AWS_SECRET
-
-    boto_bucket: _env:AWS_BUCKET
-    s3_bucket: _env:AWS_BUCKET
 
     cache_lru:
         host: 127.0.0.1
