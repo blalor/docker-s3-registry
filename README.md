@@ -1,4 +1,4 @@
-# Working S3-backed Docker registry
+# Working filesystem-backed Docker registry
 
 Embeds redis as an LRU cache, for hopefully improved performance.
 
