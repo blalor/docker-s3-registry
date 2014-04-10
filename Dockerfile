@@ -1,4 +1,4 @@
-FROM blalor/centos-supervised:latest
+FROM blalor/supervised:latest
 MAINTAINER Brian Lalor <blalor@bravo5.org>
 
 ADD src/ /tmp/src/
